@@ -1,9 +1,10 @@
 import './App.css';
 import React from 'react';
+import LocationSelector from './locationSelector';
 function App() {
   return (
     <div className="App">
-     <h1>Hello Sumanth</h1>
+     <LocationSelector />
     </div>
   );
 }
