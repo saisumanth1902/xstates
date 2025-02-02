@@ -156,8 +156,7 @@ const LocationSelector = () => {
     <div>
       <h2>Select Location</h2>
 
-      {/* Country Dropdown - Always Exists */}
-      <label>Country:</label>
+      {/* <label>Country:</label> */}
       <select value={selectedCountry} onChange={handleCountryChange}>
         <option value="">Select Country</option>
         {countries.length > 0
@@ -169,8 +168,7 @@ const LocationSelector = () => {
           : null}
       </select>
 
-      {/* State Dropdown - Always Exists but Disabled Initially */}
-      <label>State:</label>
+      {/* <label>State:</label> */}
       <select value={selectedState} onChange={handleStateChange} disabled={!selectedCountry}>
         <option value="">Select State</option>
         {states.length > 0
@@ -181,9 +179,7 @@ const LocationSelector = () => {
             ))
           : null}
       </select>
-
-      {/* City Dropdown - Always Exists but Disabled Initially */}
-      <label>City:</label>
+      {/* <label>City:</label> */}
       <select value={selectedCity} onChange={(e) => setSelectedCity(e.target.value)} disabled={!selectedState}>
         <option value="">Select City</option>
         {cities.length > 0
@@ -195,7 +191,6 @@ const LocationSelector = () => {
           : null}
       </select>
 
-      {/* Selection Message */}
       {selectedCity && selectedState && selectedCountry && (
         <p>You selected {selectedCity}, {selectedState}, {selectedCountry}</p>
       )}
